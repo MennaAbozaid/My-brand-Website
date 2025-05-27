@@ -46,10 +46,11 @@
       animation: fadeIn 1.5s ease-in-out;
     }
     h1 {
-      font-size: 3rem;
-      margin: 0.5rem 0 0.2rem 0;
+      letter-spacing: 0.25em;
+      font-size: 2.4rem;
+      margin-bottom: 0.1em;
+      margin-top: 0.2em;
       color: var(--primary);
-      letter-spacing: 2px;
       animation: slideIn 1s ease-in-out;
     }
     .slogan, .tagline {
@@ -255,13 +256,12 @@
       color: #f8f8f8 !important;
     }
     body.dark .welcome-bold {
-      color: var(--primary-dark) !important;
+      color: var(--accent) !important;
     }
     .slogan-block {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
+      display: block;
+      text-align: center;
+      gap: 0;
     }
     .slogan-photo {
       max-width: 120px;
@@ -275,12 +275,9 @@
 </head>
 <body>
   <header>
-    <img src="images/Vertical Logo3.png" alt="MYNDRA Logo">
-    <h1>MYNDRA</h1>
-    <div class="slogan-block">
-      <img src="images/slogan-photo.jpg" alt="Slogan Visual" class="slogan-photo" />
-      <p class="slogan">Where Structure Thinks</p>
-    </div>
+    <img src="images/Vertical Logo.png" alt="MYNDRA Logo">
+    <h1>M Y N D R A</h1>
+    <p class="slogan">Where Structure Thinks</p>
     <p class="welcome-bold">Welcome to the future of design and innovation.</p>
   </header>
 
@@ -296,15 +293,8 @@
   </section>
 
   <section class="showcase">
-    <h2>Our Showcase</h2>
+    <h2 style="text-align:center;">Our Showcase</h2>
     <div class="grid">
-      <div class="mockup-card" tabindex="0">
-        <img src="images/Vertical Logo3.png" alt="Logo Mockup" loading="lazy" />
-        <div class="mockup-info">
-          <h3>Brand Logo</h3>
-          <p>Our signature logo, representing the fusion of structure and intelligence.</p>
-        </div>
-      </div>
       <div class="mockup-card" tabindex="0">
         <img src="images/image2.jpg" alt="Business Card Mockup" loading="lazy" />
         <div class="mockup-info">
