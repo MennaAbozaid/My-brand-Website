@@ -1,0 +1,106 @@
+:root {
+    --primary: #330066;
+    --accent: #c5a25f;
+    --bg-light: #f0dec6;
+    --bg-dark: #1c1c1c;
+    --text-light: #f0dec6;
+    --text-dark: #444444;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    scroll-behavior: smooth;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  body.dark {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+  }
+  
+  header#hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(to right, var(--bg-light), var(--mint));
+  }
+  
+  .logo {
+    max-width: 300px;
+    margin-bottom: 1rem;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    color: var(--primary);
+  }
+  
+  .slogan {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: var(--accent);
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background-color: var(--primary);
+    padding: 1rem;
+  }
+  
+  nav a {
+    color: var(--bg-light);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  section {
+    padding: 3rem 2rem;
+  }
+  
+  #about h2,
+  #showcase h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+  }
+  
+  .gallery {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  .gallery img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.03);
+  }
+  
+  #footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--primary);
+    color: var(--bg-light);
+  }
+  
+  /* Theme Toggle Button */
+  #theme-toggle {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: var(--mint);
+    color: var(--primary);
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
