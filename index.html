@@ -39,6 +39,9 @@
     }
     header img {
       max-width: 180px;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
       margin-bottom: 1rem;
       animation: fadeIn 1.5s ease-in-out;
     }
@@ -142,10 +145,11 @@
     }
     .mockup-card img {
       width: 100%;
-      height: 180px;
+      height: 200px;
       object-fit: cover;
       border-bottom: 1px solid #eee;
       transition: filter 0.3s;
+      border-radius: 8px 8px 0 0;
     }
     .mockup-card:hover img,
     .mockup-card:focus img {
@@ -194,6 +198,15 @@
       header { padding: 2rem 0.5rem 1rem; }
       section { padding: 1rem 0.5rem; }
       .showcase .grid { grid-template-columns: 1fr; }
+      .mockup-card img {
+        height: 140px;
+      }
+      .slogan-photo {
+        max-width: 80px;
+      }
+      header img[alt="MYNDRA Logo"] {
+        max-width: 120px;
+      }
     }
     .about-us h2 {
       color: var(--primary);
@@ -244,13 +257,30 @@
     body.dark .welcome-bold {
       color: var(--primary-dark) !important;
     }
+    .slogan-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .slogan-photo {
+      max-width: 120px;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 0.3rem;
+      object-fit: cover;
+    }
   </style>
 </head>
 <body>
   <header>
-    <img src="assets/Vertical Logo5.png" alt="MYNDRA Logo" class="logo" />
+    <img src="images/Vertical Logo3.png" alt="MYNDRA Logo">
     <h1>MYNDRA</h1>
-    <p class="slogan">Where Structure Thinks</p>
+    <div class="slogan-block">
+      <img src="images/slogan-photo.jpg" alt="Slogan Visual" class="slogan-photo" />
+      <p class="slogan">Where Structure Thinks</p>
+    </div>
     <p class="welcome-bold">Welcome to the future of design and innovation.</p>
   </header>
 
@@ -269,28 +299,28 @@
     <h2>Our Showcase</h2>
     <div class="grid">
       <div class="mockup-card" tabindex="0">
-        <img src="assets/Vertical Logo5.png" alt="Logo Mockup" loading="lazy" />
+        <img src="images/Vertical Logo3.png" alt="Logo Mockup" loading="lazy" />
         <div class="mockup-info">
           <h3>Brand Logo</h3>
           <p>Our signature logo, representing the fusion of structure and intelligence.</p>
         </div>
       </div>
       <div class="mockup-card" tabindex="0">
-        <img src="image2.jpg" alt="Business Card Mockup" loading="lazy" />
+        <img src="images/image2.jpg" alt="Business Card Mockup" loading="lazy" />
         <div class="mockup-info">
           <h3>Business Card</h3>
           <p>Professional business card design for impactful first impressions.</p>
         </div>
       </div>
       <div class="mockup-card" tabindex="0">
-        <img src="image3.jpg" alt="Stationery Mockup" loading="lazy" />
+        <img src="images/image3.jpg" alt="Stationery Mockup" loading="lazy" />
         <div class="mockup-info">
           <h3>Stationery Set</h3>
           <p>Elegant stationery set to reinforce brand identity in every detail.</p>
         </div>
       </div>
       <div class="mockup-card" tabindex="0">
-        <img src="image4.jpg" alt="Website Mockup" loading="lazy" />
+        <img src="images/image4.jpg" alt="Website Mockup" loading="lazy" />
         <div class="mockup-info">
           <h3>Website Design</h3>
           <p>Modern, responsive website interface for seamless client interaction.</p>
