@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MYNDRA</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <style>
     :root {
       --primary: #330066;
@@ -525,15 +526,21 @@
 
     document.querySelectorAll(".mockup-card").forEach(card => {
       card.addEventListener("click", () => {
-        const imgSrc = card.querySelector("img").src;
-        const title = card.querySelector("h3").innerText;
-        const desc = card.querySelector("p").innerText;
-
-        modalImg.src = imgSrc;
-        modalTitle.innerText = title;
-        modalDesc.innerText = desc;
-
-        modal.style.display = "flex";
+        const img = card.querySelector("img");
+        const title = card.querySelector("h3");
+        const desc = card.querySelector("p");
+        if (img && title && desc) {
+          modalImg.src = img.src;
+          modalImg.alt = img.alt;
+          modalTitle.innerText = title.innerText;
+          modalDesc.innerText = desc.innerText;
+          modal.style.display = "flex";
+        }
+      });
+      card.addEventListener("keypress", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+          card.click();
+        }
       });
     });
 
@@ -546,34 +553,6 @@
         modal.style.display = "none";
       }
     });
-  </script>
-  <script>
-    // Modal logic for showcase
-    document.querySelectorAll('.mockup-card').forEach(card => {
-      card.addEventListener('click', function () {
-        const img = card.querySelector('img');
-        const title = card.querySelector('h3');
-        const desc = card.querySelector('p');
-        document.getElementById('modalImg').src = img.src;
-        document.getElementById('modalImg').alt = img.alt;
-        document.getElementById('modalTitle').textContent = title.textContent;
-        document.getElementById('modalDesc').textContent = desc.textContent;
-        document.getElementById('mockupModal').style.display = 'flex';
-      });
-      card.addEventListener('keypress', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          card.click();
-        }
-      });
-    });
-    document.getElementById('closeModal').onclick = function () {
-      document.getElementById('mockupModal').style.display = 'none';
-    };
-    window.onclick = function(event) {
-      if (event.target === document.getElementById('mockupModal')) {
-        document.getElementById('mockupModal').style.display = 'none';
-      }
-    };
   </script>
 </body>
 </html>
